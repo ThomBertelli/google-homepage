@@ -4,7 +4,18 @@
         font-family: arial,sans-serif;
         font-size: 13px;
         color: rgba(0,0,0,0.87);
+    }
+    input{
+        outline: none;
+    }
 
+    a:hover{
+        text-decoration: underline;
+        cursor: pointer;        
+    }
+
+    .border:hover{
+        border-style: outset;
 
     }
 
@@ -17,15 +28,39 @@
         color: #fff;
         position: absolute;
         right: 30px;
+        top: 20px;
 
+    }
+    .searchbar{
+        position: fixed;
+        top: 36%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .border{
+        width: 500px;
+        height: 50px;
+        background-color: transparent;
+        border-style:ridge   ;
+        border-color: #626466;
+        border-radius: 24px;
+        border-width: 1px;
+        border-style: ridge ;
+        position:fixed;
+        top: 35%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        z-index: -1;    
     }
 
         .logo {
-        display: block;
-        margin: 0 auto;
-        position: relative;
-        left: 45%;
-        top: 300px;
+        position: fixed;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+
 
     }
 
@@ -34,15 +69,15 @@
 
 <html>
     <head>
-        <div>
-            <a>About</a>
-            <a>Store</a>
+        <div >
+            <a style="position: absolute; left: 30px; top: 31px;">About</a>
+            <a style="position: absolute; left: 90px; top: 31px;">Store</a>
         </div>
         <div >
             <a style="position: absolute; right: 240px; top: 31px;" >Gmail</a>
             <a style="position: absolute; right: 170px; top: 31px;">Images</a>
             <a style="position: absolute; right: 120px; top: 27px;"><img src="outline_apps_black_24dp.png" alt="Google Apps Icon"></a>
-            <a id="blue-button">Sign in</a>
+            <a.div style="cursor: default ;" id="blue-button">Sign in</a.div>
         </div>
                            
         
@@ -54,11 +89,12 @@
             <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo">
             </div>
         
-            <div>
-            <img src="outline_search_black_24dp.png" alt= "Search icon">
-            <input type="text" role="combobox" title="Search"> 
-            <img src="outline_mic_black_24dp.png" alt="Voice Serch icon">
+            <div class="searchbar">            
+            <img style=" margin: 0 auto; position: relative;" src="outline_search_black_24dp.png" alt= "Search icon">
+            <input style=" position: relative;  bottom: 10px ; background-color: transparent; width: 400px; height: 40px; border:none;" type="text" role="combobox" title="Search"> 
+            <img style=" margin: 0 auto;position: relative;"src="outline_mic_black_24dp.png" alt="Voice Serch icon">
              </div>
+             <div class="border"></div>
         
          
              <div>      
@@ -78,9 +114,6 @@
             <a>Terms</a>
             <a>Settings</a>
         </div>
-
-
-
     </footer>
     
 </html>
