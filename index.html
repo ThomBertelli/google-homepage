@@ -3,7 +3,7 @@
     body{
         font-family: arial,sans-serif;
         font-size: 13px;
-        color: rgba(0,0,0,0.87);
+        color: rgba(68, 67, 67, 0.87);
     }
     input{
         outline: none;
@@ -43,6 +43,7 @@
         height: 50px;
         background-color: transparent;
         border-style:ridge   ;
+        -webkit-appearance: none;
         border-color: #626466;
         border-radius: 24px;
         border-width: 1px;
@@ -54,15 +55,44 @@
         z-index: -1;    
     }
 
-        .logo {
+    .logo {
         position: fixed;
         top: 25%;
         left: 50%;
         transform: translate(-50%,-50%);
-
-
-
     }
+
+    .buttonsearch {
+        position: fixed;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding: 0;
+        border: none;
+        background: none;
+        font-family: arial,sans-serif;
+                    
+    }
+
+    .buttonsearch:hover{
+        cursor: pointer;
+    }
+
+    .bottonleft{
+        padding-right: 10px;
+        position: absolute;
+        bottom: 15px;
+        left: 30px;
+          
+    }
+
+    .bottonright{
+        padding-right: 10px;
+        position: absolute;
+        bottom: 15px;
+        right: 30px;
+    }
+
 
 
 </style>
@@ -93,25 +123,26 @@
             <img style=" margin: 0 auto; position: relative;" src="outline_search_black_24dp.png" alt= "Search icon">
             <input style=" position: relative;  bottom: 10px ; background-color: transparent; width: 400px; height: 40px; border:none;" type="text" role="combobox" title="Search"> 
             <img style=" margin: 0 auto;position: relative;"src="outline_mic_black_24dp.png" alt="Voice Serch icon">
-             </div>
-             <div class="border"></div>
+            </div>
+
+            <div style= "border-color: rgba(68, 67, 67, 0.87)" class="border"></div>
         
-         
-             <div>      
-            <input value="Google Search" type="submit">
-            <input value="I'm Felling Luck" type="submit">
-            </div>  
+            <div class="buttonsearch">      
+            <input style= "padding-right: 35px;border:none; color: rgba(68, 67, 67, 0.87);" value="Google Search" type="submit">
+            <input style= "border:none;color: rgba(68, 67, 67, 0.87)" value="I'm Felling Luck" type="submit">
+            </div>
+              
         
     </body>
     <footer>
-        <div>
-            <a>Advertising</a>
-            <a>Business</a>
+        <div  class="bottonleft">
+            <a style="padding-right: 20px;">Advertising</a>
+            <a style="padding-right: 20px;">Business</a>
             <a>How Search works</a>
         </div>
-        <div>
-            <a>Privacy</a>
-            <a>Terms</a>
+        <div class="bottonright">
+            <a style="padding-right: 20px;">Privacy</a>
+            <a style="padding-right: 20px;">Terms</a>
             <a>Settings</a>
         </div>
     </footer>
